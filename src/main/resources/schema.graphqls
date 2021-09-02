@@ -1,0 +1,45 @@
+type Query {
+    customerById(id: String!): CustomerDTO
+    productById(id: String!): ProductDTO
+    getAllOrdersWithoutProductDetails(id: String!): [OrderDTO]
+    getAllOrdersWithProductDetails(id: String!): [OrderDTO]
+}
+
+input CreateOrderDTO {
+    customerId: String!
+    productId: String!
+    quantity: Int!
+}
+
+input CreateProductDTO {
+    name: String!
+    price: String!
+    description: String!
+}
+
+type Mutation {
+    createOrder(order: CreateOrderDTO!): OrderDTO!
+    createProduct(product: CreateProductDTO!): ProductDTO!
+}
+
+type CustomerDTO{
+    id: String!
+    name: String!
+    email: String!
+    orders: [OrderDTO]
+}
+
+type OrderDTO {
+    id: String!
+    customer: CustomerDTO!
+    product: ProductDTO!
+    quantity: Int!
+    status: String!
+}
+
+type ProductDTO {
+    id: String!
+    name: String
+    description: String
+    price: String
+}

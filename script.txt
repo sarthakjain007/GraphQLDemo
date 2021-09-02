@@ -1,0 +1,20 @@
+INSERT INTO customers (name, email) VALUES ('Sarthak', 'sarthak@gmail.com');
+INSERT INTO customers (name, email) VALUES ('Raj', 'raj@gmail.com');
+
+
+INSERT INTO products (name, description, price) VALUES ('iPhone X', 'Apple iPhone X', '1299.99');
+INSERT INTO products (name, description, price) VALUES ('Galaxy S10', 'Samsung Galaxy', '1099.99');
+INSERT INTO products (name, description, price) VALUES ('Pixel 3a', 'Google Pixel', '999.99');
+INSERT INTO products (name, description, price) VALUES ('Huawei P30', 'Huwaei', '899.99');
+INSERT INTO products (name, description, price) VALUES ('One Plus 7T', 'One Plus', '1099.99');
+INSERT INTO products (name, description, price) VALUES ('Motorola Razor', 'Motorola', '899.99');
+INSERT INTO products (name, description, price) VALUES ('Oppo Reno 10x', 'Oppo', '1099.99');
+
+
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(1, 1, 1, 'PENDING');
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(1, 3, 2, 'PENDING');
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(1, 5, 1, 'DELIVERED');
+
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(2, 5, 1, 'PENDING');
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(2, 2, 1, 'CANCELLED');
+INSERT INTO orders (customer_id, product_id, quantity, status) VALUES(2, 6, 1, 'DELIVERED');
